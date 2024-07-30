@@ -1,0 +1,31 @@
+#{extends 'main.html' /}
+#{set title:'Formulário' /}
+
+<div class="container-fluid  col-7 text-center" style="margin-top: 100px;">
+	<h1>Cadastro de Postagens</h1>
+	
+	<form class="text-start mt-4 " action="/postagens/salvar">
+		<div class="mb-3">
+			<label for="formGroupExampleInput" class="form-label">Título</label>
+			<input type="text" class="form-control border border-warning-subtle focus-ring focus-ring-warning" id="formGroupExampleInput" placeholder="Insira aqui o título" name="p.titulo">
+		</div>
+		<div class="mb-3">
+			<label for="formGroupExampleInput2" class="form-label">Conteúdo</label>
+			<textarea class="form-control border border-warning-subtle focus-ring focus-ring-warning" id="formGroupExampleInput2" placeholder="Insira aqui o conteúdo" name="p.conteudo"></textarea>
+		</div>
+		<div class="mb-3">
+			<label for="formGroupExampleInput3" class="form-label">Autor</label>
+			<input type="text" class="form-control border border-warning-subtle focus-ring focus-ring-warning" id="formGroupExampleInput3" placeholder="Insira aqui o autor" name="p.autor">
+		</div>
+		<div class="mb-4">
+			<label for="formGroupExampleInput4" class="form-label">Data</label>
+			<input type="date" class="form-control border border-warning-subtle focus-ring focus-ring-warning" id="formGroupExampleInput4" name="p.data">
+		</div>
+		<div class="mb-3">
+			<input type="submit" class="btn btn-warning" value="Cadastrar">
+			<a href="@{postagens.listar}" class="btn btn-outline-dark">Ir para a listagem</a>
+		</div>
+	</form>
+</div>
+
+
